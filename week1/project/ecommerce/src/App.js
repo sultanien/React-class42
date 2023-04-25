@@ -20,6 +20,7 @@ function App() {
     category !== null
       ? setFilteredProducts(filterProducts(category))
       : setFilteredProducts(allProducts);
+      
   }
 
   console.log(filteredProducts);
