@@ -8,11 +8,7 @@ function Button({ handleProduct }) {
       {allCategories &&
         allCategories.map((category, index) => {
           return (
-            <button
-              className="button-item"
-              key={index}
-              onClick={handleProduct}
-            >
+            <button className="button-item" key={index} onClick={handleProduct}>
               {category}
             </button>
           );

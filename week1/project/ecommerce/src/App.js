@@ -6,7 +6,6 @@ import Button from "./components/categories";
 import allProducts from "./fake-data/all-products";
 import { filterProducts } from "./components/servers";
 
-
 function App() {
   const [filteredProducts, setFilteredProducts] = useState(allProducts);
 
@@ -15,14 +14,13 @@ function App() {
     category !== null
       ? setFilteredProducts(filterProducts(allProducts, category))
       : setFilteredProducts(allProducts);
-
   }
 
   return (
     <div className="App">
       <h1>Products</h1>
-      <Button handleProduct={handleProduct}/>
-      <Products filteredProducts={filteredProducts}/>
+      <Button handleProduct={handleProduct} />
+      <Products filteredProducts={filteredProducts} />
     </div>
   );
 }

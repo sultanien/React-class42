@@ -1,7 +1,6 @@
 /** @format */
 
-function Products({filteredProducts}) {
-
+function Products({ filteredProducts }) {
   return (
     <div>
       <ul className="products">
