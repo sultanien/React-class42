@@ -11,7 +11,6 @@ function Button({ handleProduct }) {
             <button
               className="button-item"
               key={index}
-              value={category}
               onClick={handleProduct}
             >
               {category}

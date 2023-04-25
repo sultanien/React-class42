@@ -16,9 +16,9 @@ function App() {
   }
 
   function handleProduct(e) {
-    const categoryType = e.target.textContent.replace("FAKE: ", "");
-    categoryType !== null
-      ? setFilteredProducts(filterProducts(categoryType))
+    const category = e.target.textContent.replace("FAKE: ", "");
+    category !== null
+      ? setFilteredProducts(filterProducts(category))
       : setFilteredProducts(allProducts);
   }
 
