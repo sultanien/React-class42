@@ -1,14 +1,34 @@
 /** @format */
+import React, { useState } from "react";
 import "./App.css";
-import Component from "./components/component.js";
+import Products from "./components/productList.js";
+import Button from "./components/categories";
+import allProducts from "./fake-data/all-products";
 
 
 function App() {
-  
+  const [filteredProducts, setFilteredProducts] = useState(allProducts);
+  function filterProducts(category) {
+    const filteredProducts = allProducts.filter(
+      (item) => item.category === category
+    );
+    return filteredProducts;
+  }
+
+  function handleProduct(e) {
+    const categoryType = e.target.textContent.replace("FAKE: ", "");
+    categoryType !== null
+      ? setFilteredProducts(filterProducts(categoryType))
+      : setFilteredProducts(allProducts);
+  }
+
+  console.log(filteredProducts);
+
   return (
     <div className="App">
       <h1>Products</h1>
-      <Component />
+      <Button handleProduct={handleProduct}/>
+      <Products filteredProducts={filteredProducts}/>
     </div>
   );
 }
