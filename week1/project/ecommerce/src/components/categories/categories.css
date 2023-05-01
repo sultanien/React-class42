@@ -1,0 +1,19 @@
+.categoryButtons {
+  display: flex;
+}
+
+.button-item {
+  display: block;
+  cursor: pointer;
+  font-weight: 700;
+  margin: 2px;
+  padding: 18px;
+  border: none;
+}
+
+.button-item:hover {
+  background-color: #d0d0d0;
+}
+.selected-button {
+    background-color: #a9a9a9;
+ }

@@ -1,10 +1,12 @@
 /** @format */
 
-function Products({ filteredProducts }) {
+import './Product.css'
+
+function Products({ filteredProducts, isLoading }) {
   return (
     <div>
       <ul className="products">
-        {filteredProducts.map((product) => {
+        {isLoading? 'Loading' : filteredProducts.map((product) => {
           return (
             <li className="productItem" key={product.id}>
               <img src={product.image} alt={product.title} />
