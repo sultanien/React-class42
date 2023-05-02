@@ -21,7 +21,7 @@ ul {
   background-color: #d0d0d0;
 }
 
-.button-item:focus {
+.button-item.selected-button {
   background-color: #a9a9a9;
 }
 

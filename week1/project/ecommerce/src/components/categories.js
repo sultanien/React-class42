@@ -2,13 +2,22 @@
 
 import allCategories from "../fake-data/all-categories";
 
-function Button({ handleProduct }) {
+function Button({ handleProduct, selectedTab}) {
   return (
     <div className="categoryButtons">
-      {allCategories &&
-        allCategories.map((category, index) => {
+      {allCategories?.map((category, index) => {
           return (
-            <button className="button-item" key={index} onClick={handleProduct}>
+            <button
+              className={
+                selectedTab === category
+                  ? "button-item selected-button"
+                  : "button-item"
+              }
+              key={index}
+              onClick={() => {
+                handleProduct(category);
+              }}
+            >
               {category}
             </button>
           );
