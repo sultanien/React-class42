@@ -1,4 +1,5 @@
 /** @format */
+import { Link } from "react-router-dom"
 
 function Products({ filteredProducts, isLoading, hasError}) {
   return (
@@ -11,8 +12,10 @@ function Products({ filteredProducts, isLoading, hasError}) {
           {filteredProducts?.map((product) => {
             return (
               <li className="productItem" key={product.id}>
-                <img src={product.image} alt={product.title} />
-                <p>{product.title}</p>
+                <Link to={`/product/${product.id}`}>
+                  <img src={product.image} alt={product.title} />
+                  <p>{product.title}</p>
+                </Link>
               </li>
             );
           })}
