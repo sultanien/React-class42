@@ -21,9 +21,11 @@
   position: absolute;
   margin-bottom: auto;
   margin-top: auto;
-  max-height: 25px;
+  height: 25px;
+  padding: 3px;
   right: 30px;
   top: 30px;
   background-color: white;
   cursor: pointer;
+  border: 3px solid black;
 }

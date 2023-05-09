@@ -49,6 +49,7 @@ ul {
   gap: 4px;
   justify-content: center;
   align-content: center;
+
 }
 
 @media only screen and (max-width: 981px) {
