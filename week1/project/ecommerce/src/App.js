@@ -1,12 +1,26 @@
 /** @format */
 
 import "./App.css";
-import Main from "./pages/Main";
+
+import Products from "./components/productList.js";
+import Categories from "./components/categories";
+import allProducts from "./fake-data/all-products";
+import { filterProducts } from "./helpers/servers";
 
 function App() {
+  const [selectedTab, setSelectedTab] = useState('')
+
+  function handleProduct(category){
+    setSelectedTab(category === selectedTab ? '' : category)
+  }
+  
+  const filteredProducts = selectedTab === '' ? allProducts : filterProducts(allProducts, selectedTab.replace("FAKE: ",""))
+
   return (
     <div className="App">
-      <Main />
+      <h1>Products</h1>
+      <Categories handleProduct={handleProduct} selectedTab={selectedTab}/>
+      <Products filteredProducts={filteredProducts}/>
     </div>
   );
 }

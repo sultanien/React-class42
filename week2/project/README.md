@@ -1,26 +1,70 @@
-# Ecommerce Project II
+# Getting Started with Create React App
 
-## 1. Setup
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Make sure you created a new week2 branch from the `main` branch of your forked repo. Then copy over the `ecommerce` folder you made last week into the `week2/project` folder. That way any feedback you get for week1 can be changed in the week1 branch and you are free to refactor this week as you see fit. This does mean you may need to apply the same changes to multiple branches, but let's say that that is good for the learning process :).
+## Available Scripts
 
-## 2. Requirements
+In the project directory, you can run:
 
-We are going to focus on linking up our app to the API this week. By the end of the assignment your application should work similar to this:
+### `npm start`
 
-[![Week 2 Screenshot](../../assets/project/week2.png)](https://hyf-react-w2-example.netlify.app/)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-There is a live version [here](https://hyf-react-w2-example.netlify.app/)
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-_Note: The API is a fully open API so can be a little slow to respond sometimes. Great for checking your loading UX!_
+### `npm test`
 
-What you need to have done at the end of the week:
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- The fake-data directory should not be a part of your project anymore
-- Your app will need to make 2 queries to the following endpoints:
-  - `https://fakestoreapi.com/products/categories` -> To get all the categories
-  - `https://fakestoreapi.com/products` or `https://fakestoreapi.com/products/category/:selectedCategory` -> To get the products. The API needs to do the filtering, not the frontend. Usually the amount of products will be too large to do the filtering on the frontend.
-- Your app needs to show that it is loading when waiting on the request to come back. You can test this by mimicing a slow connection in your browsers' developer tools
-- Your app needs to show an error message if the request failed
-- Your app needs to go to a detail page `/product/:id` whenever you click on the product card in the list. This should get the details from the endpoint: `https://fakestoreapi.com/products/<id>`. For now we won't add a navigation bar, the browsers 'back' button will do the trick. _TIP: You will need to add the `react-router-dom` package and add the routing to your app regardless._
-- You need to deploy your app somewhere (using something like [netlify](https://www.netlify.com)) and put the link in your PR! Make it a different one than the previous week.
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
