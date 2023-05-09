@@ -1,15 +1,21 @@
 /** @format */
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import useFetch from "../helpers/useFetch";
 
-function Products({ filteredProducts, isLoading, hasError}) {
+function Products({ selectedTab }) {
+  const url = selectedTab
+    ? `https://fakestoreapi.com/products/category/${selectedTab}`
+    : "https://fakestoreapi.com/products";
+    
+  const res = useFetch(url);
   return (
     <div>
-      {hasError && <p>Something went wrong.</p>}
-      {isLoading ? (
+      {res.error && <p>Something went wrong.</p>}
+      {res.loading ? (
         <p>Loading ...</p>
       ) : (
         <ul className="products">
-          {filteredProducts?.map((product) => {
+          {res.data?.map((product) => {
             return (
               <li className="productItem" key={product.id}>
                 <Link to={`/product/${product.id}`}>

@@ -1,9 +1,12 @@
 /** @format */
 
-function Button({ categories, handleProduct, selectedTab }) {
+import useFetch from "../helpers/useFetch";
+
+function Categories({ handleProduct, selectedTab }) {
+  const res = useFetch("https://fakestoreapi.com/products/categories");
   return (
     <div className="categoryButtons">
-      {categories?.map((category, index) => {
+      {res.data?.map((category, index) => {
         return (
           <button
             className={
@@ -24,4 +27,4 @@ function Button({ categories, handleProduct, selectedTab }) {
   );
 }
 
-export default Button;
+export default Categories;
