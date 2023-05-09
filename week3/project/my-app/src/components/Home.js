@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "../App.css";
 import Products from "./productList.js";
 import Categories from "./categories";
+import NavBar from "./NavBar";
 
 function Home() {
   const [selectedTab, setSelectedTab] = useState("");
@@ -13,7 +14,7 @@ function Home() {
 
   return (
     <div className="Home">
-      <h1>Products</h1>
+      <NavBar />
       <Categories handleProduct={handleProduct} selectedTab={selectedTab} />
       <Products selectedTab={selectedTab} />
     </div>

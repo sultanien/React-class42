@@ -1,6 +1,8 @@
 /** @format */
-import { Link } from "react-router-dom";
+import React from "react";
 import useFetch from "../helpers/useFetch";
+import ProductItem from "./Product";
+
 
 function Products({ selectedTab }) {
   const url = selectedTab
@@ -18,10 +20,7 @@ function Products({ selectedTab }) {
           {res.data?.map((product) => {
             return (
               <li className="productItem" key={product.id}>
-                <Link to={`/product/${product.id}`}>
-                  <img src={product.image} alt={product.title} />
-                  <p>{product.title}</p>
-                </Link>
+                <ProductItem product={product}/>
               </li>
             );
           })}

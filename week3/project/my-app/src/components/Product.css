@@ -1,0 +1,29 @@
+/** @format */
+
+.product-item {
+  margin: auto;
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  height: 400px;
+  justify-items: center;
+}
+
+.product-item img.product-item-img {
+  margin-bottom: auto;
+  margin-top: auto;
+  max-height: 300px;
+  object-fit: contain;
+  width: 100%;
+}
+.icon {
+  position: absolute;
+  margin-bottom: auto;
+  margin-top: auto;
+  max-height: 25px;
+  right: 30px;
+  top: 30px;
+  background-color: white;
+  cursor: pointer;
+}
